@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Questions</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+</head>
+
+<body style="background-color: rgb(245, 214, 40);">
+    <div class="container">
+        <div class="jumbotron text-white" style="background-color: rgb(214, 51, 51);">
+            <h1>F.R.I.E.N.D.S Finder</h1>
+            <hr>
+            <h2>Answer the following questions</h2>
+            <br>
+            <div class="float-right">
+                <a href="/app/public/home.html">
+                    <button type="button" class="btn btn-lg btn-secondary">
+                        <h4>
+                            <span class="fas fa-home"></span>
+                            Home</h4>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <form>
+            <div class="card">
+                <div class="card-header">About You</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="nameInput">Your Name (required)</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkInput">URL to your image photo (required)</label>
+                        <input type="text" class="form-control" id="linkInput" placeholder="Enter image url">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">Questions (Where 1 = Strongly disagrees and 5 = Strongly agrees)</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="select1">Do you like coffee?</label>
+                                <select class="form-control" id="select1">
+                                    <option selected></option>
+                                    <option>1 </option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5 </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="select2">Do you like to eat?</label>
+                                <select class="form-control" id="select2">
+                                    <option selected></option>
+                                    <option>1 </option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5 </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="select3">Are you a neat freak?</label>
+                                <select class="form-control" id="select3">
+                                    <option selected></option>
+                                    <option>1 </option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5 </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="select4">Do you think you are a funny person?</label>
+                                <select class="form-control" id="select4">
+                                    <option selected></option>
+                                    <option>1 </option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5 </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="select5">Do you like dinosaurs?</label>
+                                <select class="form-control" id="select5">
+                                    <option selected></option>
+                                    <option>1 </option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5 </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="select6">Do you like fashion?</label>
+                                <select class="form-control" id="select6">
+                                    <option selected></option>
+                                    <option>1 </option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5 </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="select7">Do you spend alot of time with your friends?</label>
+                                <select class="form-control" id="select7">
+                                    <option selected></option>
+                                    <option>1 </option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5 </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="select8">Are you competitive?</label>
+                                <select class="form-control" id="select8">
+                                    <option selected></option>
+                                    <option>1 </option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5 </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="select9">Do you like music? </label>
+                                <select class="form-control" id="select9">
+                                    <option selected></option>
+                                    <option>1 </option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5 </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="select10">Do you love watching F.R.I.E.N.D.S the tv show?</label>
+                                <select class="form-control" id="select10">
+                                    <option selected></option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+                    aria-hidden="true"></i> Submit</button>
+        </form>
+    </div>
+    <!--Modal-->
+    <div id="myModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your best Match</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="matchName"></div>
+                    <div>
+                        <img id="matchImg" class="img-thumbnail" style="width: 100%" src="" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $("#submit").on("click", function () {
+            //event.preventDefault();
+            // Validate Form
+            function validateForm() {
+
+                var valid = true;
+                $('.form-control').each(function () {
+                    if ($(this).val() === '')
+                        valid = false;
+                });
+                return valid;
+            }
+
+            var isFormValid = validateForm();
+            if (isFormValid == true) {
+
+                var formData = {
+                    name: $("#nameInput").val(),
+                    photo: $("#linkInput").val(),
+                    scores: [$("#select1").val(), $("#select2").val(), $("#select3").val(),
+                    $("#select4").val(), $("#select5").val(), $("#select6").val(),
+                    $("#select7").val(), $("#select8").val(), $("#select9").val(),
+                    $("#select10").val(),]
+                }
+                // Grab the URL of the website
+                var url = window.location.origin;
+                // Post the data to the friends API. 
+                $.post(url + "/api/friends", formData, function (data) {
+                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                    $("#matchName").text(data.name);
+                    $('#matchImg').attr("src", data.img);
+                    // Show the modal with the best match 
+                    $('#myModal').modal('toggle')
+                });
+            } else {
+                alert("Please fill out all fields before submitting!");
+            }
+
+            return false;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>F.R.I.E.N.D.S Finder - Home</title>
+
+    <!-- COOL FONTS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- BOOTSRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <style>
+        body {
+            background-color: rgb(214, 51, 51);
+            background-repeat: no-repeat;
+            background-size: 100% 105%;
+            background-image: url("https://media.giphy.com/media/hMkPriZTKphdu/giphy.gif");
+        }
+
+        html {
+            height: 100%;
+        }
+
+        a {
+            color: white;
+        }
+
+        .api-link,
+        .git-link {
+            font-size: 20px;
+            left: 30px;
+            top: -30px;
+        }
+
+        #pageFooter {
+            color: grey;
+            padding-bottom: 10px;
+            position: relative;
+        }
+
+        #wrapper {
+            display: block;
+            margin: 0 auto -123px;
+            margin-left: 2%;
+            margin-right: 2%;
+            min-height: 100%;
+            padding-bottom: 250px;
+            padding-top: 100px;
+        }
+
+        @media screen and (max-width:850px) {
+            .display-5 {
+                font-size: 10px;
+            }
+
+            #wrapper {
+                margin-bottom: -107px;
+                font-style: oblique;
+                font-weight: 800;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper" style="text-align: center;">
+        <div class="jumbotron bg-transparent" style="position: relative;">
+            <h1 class="display-4" style="color: rgb(214, 51, 51);">F.R.I.E.N.D.S Finder!</h1>
+            <hr class="my-2">
+            <p class="lead" style="color: rgb(43, 76, 241);">Answer some fun questions.</p>
+            <p class="lead" style="color: rgb(245, 214, 40);">Then find the friend with the greatest compatibility!</p>
+            <a href="/app/public/survey.html"><button id="survey-btn" class="btn btn-primary btn-lg">SURVEY</button></a>
+        </div>
+
+
+
+    </div>
+    <!-- FOOTER START-->
+    <footer id="pageFooter">
+        <a class="api-link" href="/app/data/friends.js">API F.R.I.E.N.D.S Link</a>
+        <br>
+        <a class="git-link" href="https://github.com/jess19ibarra/Friend-Finder">GitHub Repo</a>
+
+    </footer>
+    <!-- FOOTER END-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
