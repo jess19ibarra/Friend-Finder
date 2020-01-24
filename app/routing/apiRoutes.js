@@ -1,15 +1,15 @@
-var friendsData = require("../app/data/friends.js");
+var friendsData = require("../data/friends.js");
 
 
 module.exports = function(app) {
 
     // API GET Requests
-    app.get("/api/friends", function(req, res) {
+    app.get("/data/friends.js", function(req, res) {
       res.json(friendsData);
     });
   
     // API POST Requests
-    app.post("/api/friends", function(req, res) {
+    app.post("/data/friends.js", function(req, res) {
 
         var bestMatch = {
             name: "",

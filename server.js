@@ -12,8 +12,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Routes
-require("./routing/apiRoutes")(app);
-require("./routing/htmlRoutes")(app);
+app.get("/", function(req,response){
+  res.json(path.join(__dirname, "public/home.html"));
+  });
+
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 //Server
 app.listen(PORT, function() {
