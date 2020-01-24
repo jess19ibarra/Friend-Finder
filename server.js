@@ -12,9 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Routes
-app.get("/", function(req,response){
-  res.json(path.join(__dirname, "public/home.html"));
-  });
+
 
 require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
