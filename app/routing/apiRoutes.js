@@ -1,53 +1,56 @@
-var friendsData = require("../data/friends.js");
-
-
-module.exports = function(app) {
-
+// ===============================================================================
+// LOAD DATA
+// We are linking our routes to a series of "data" sources.
+// These data sources hold arrays of information on table-data, waitinglist, etc.
+// ===============================================================================
+// var tableData = require("../data/tableData");
+var friends = require("../data/friends");
+// ===============================================================================
+// ROUTING
+// ===============================================================================
+module.exports = function (app) {
     // API GET Requests
-    app.get("/data/friends.js", function(req, res) {
-      res.json(friendsData);
+    // Below code handles when users "visit" a page.
+    // In each of the below cases when a user visits a link
+    // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
+    // ---------------------------------------------------------------------------
+    app.get("/api/friends", function (req, res) {
+        console.log("Hit route /api/friends")
+        res.json(friends);
     });
-  
     // API POST Requests
-    app.post("/data/friends.js", function(req, res) {
-
+    // Below code handles when a user submits a form and thus submits data to the server.
+    // In each of the below cases, when a user submits form data (a JSON object)
+    // ...the JSON is pushed to the appropriate JavaScript array
+    // (ex. User fills out a reservation request... this data is then sent to the server...
+    // Then the server saves the data to the tableData array)
+    // ---------------------------------------------------------------------------
+    app.post("/api/friends", function (req, res) {
         var bestMatch = {
             name: "",
-            img: "",
-            score: 0
-        };
-
-        var newFriend = req.body;
-        var scores = newFriend.scores;
-        var scoreDiff = 0;
-
-        for (var i = 0; i < friendsData.length; i ++) {
-
-            scoreDiff = 0;
-            var friendScore = friendsData[i].scores;
-
-            for (var j = 0; j < friendScore.length; j++) {
-                
-                scoreDiff = scoreDiff + (Math.abs(parseInt(friendScore[j]) - parseInt(scores[j])));
+            photo: "",
+            scores: 10000
+        }
+        // all user data (from post)
+        var userData = req.body;
+        // user from post score
+        var userScores = userData.scores;
+        //total difference we will compare
+        var totalDifference;
+        for (var i = 0; i < friends.length; i++) {
+            // the current friend in the loop
+            var thisFriend = friends[i];
+            totalDifference = 0;
+            for (var j = 0; j < thisFriend.scores.length; j++) {
+                totalDifference += Math.abs(thisFriend.scores[j] - userScores[j]);
             }
-
-            if (i == 0) {
-
-                bestMatch.name = friendsData[i].name;
-                bestMatch.img = friendsData[i].img;
-                bestMatch.score = scoreDiff;
-            }
-
-            else if (bestMatch.score < scoreDiff) {
-
-                bestMatch.name = friendsData[i].name;
-                bestMatch.img = friendsData[i].img;
-                bestMatch.score = scoreDiff;
+            if (totalDifference <= bestMatch.scores) {
+                bestMatch.name = thisFriend.name;
+                bestMatch.photo = thisFriend.photo;
+                bestMatch.scores = totalDifference;
             }
         }
-
-        friendsData.push(newFriend);
-		res.json(bestMatch);
+        friends.push(userData);
+        res.json(bestMatch);
     });
 };
-  
